@@ -10,55 +10,36 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  
+  <div class="form">
+    <table>
+      <tr>
+        <th colspan=4>イベント名</th>
+      </tr>
+      <tr>
+        <td colspan=4><%= f.text_field :title %></td>
+      </tr>
+      <tr>
+        <th colspan=4>開催日程</th>
+      </tr>
+      <tr>
+        <td><%= f.number_field :year1 %>年</td>
+        <td><%= f.number_field :month1 %>月</td>
+        <td><%= f.number_field :day1 %>日</td>
+        <td><%= f.text_field :hour1 %>：<%= f.text_field :minute1 %> ～</td>
+      </tr>
+      <tr>
+        <th colspan=4>締切日時</th>
+      </tr>
+      <tr>
+        <td><%= f.number_field :year2 %>年</td>
+        <td><%= f.number_field :month2 %>月</td>
+        <td><%= f.number_field :day2 %>日</td>
+        <td><%= f.text_field :hour2 %>：<%= f.text_field :minute2 %> まで</td>
+      </tr>
+    </table>
   </div>
-  <div class="field">
-    <%= f.label :year1 %><br>
-    <%= f.number_field :year1 %>
-  </div>
-  <div class="field">
-    <%= f.label :month1 %><br>
-    <%= f.number_field :month1 %>
-  </div>
-  <div class="field">
-    <%= f.label :day1 %><br>
-    <%= f.number_field :day1 %>
-  </div>
-  <div class="field">
-    <%= f.label :hour1 %><br>
-    <%= f.number_field :hour1 %>
-  </div>
-  <div class="field">
-    <%= f.label :minute1 %><br>
-    <%= f.number_field :minute1 %>
-  </div>
-  <div class="field">
-    <%= f.label :year2 %><br>
-    <%= f.number_field :year2 %>
-  </div>
-  <div class="field">
-    <%= f.label :month2 %><br>
-    <%= f.number_field :month2 %>
-  </div>
-  <div class="field">
-    <%= f.label :day2 %><br>
-    <%= f.number_field :day2 %>
-  </div>
-  <div class="field">
-    <%= f.label :hour2 %><br>
-    <%= f.number_field :hour2 %>
-  </div>
-  <div class="field">
-    <%= f.label :minute2 %><br>
-    <%= f.number_field :minute2 %>
-  </div>
-  <div class="field">
-    <%= f.label :free %><br>
-    <%= f.text_area :free %>
-  </div>
+<br><br><br>
   <div class="actions">
     <%= f.submit %>
   </div>
