@@ -69,6 +69,6 @@ class JoinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def join_params
-      params.require(:join).permit(:name, :number, :pass)
+      params.require(:join).permit(:name, :number, :pass, :title)
     end
 end
