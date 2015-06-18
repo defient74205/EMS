@@ -6,6 +6,7 @@
       <th>Name</th>
       <th>Number</th>
       <th>Pass</th>
+      <th>event</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= join.name %></td>
         <td><%= join.number %></td>
         <td><%= join.pass %></td>
+        <td><%= join.title %></td>
         <td><%= link_to 'Show', join %></td>
         <td><%= link_to 'Edit', edit_join_path(join) %></td>
         <td><%= link_to 'Destroy', join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
