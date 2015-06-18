@@ -14,25 +14,25 @@
   <div class="form">
     <table>
       <tr>
-        <td colspan=4><b>イベント名</b></td>
+        <th colspan=4>イベント名</th>
       </tr>
       <tr>
         <td colspan=4><%= f.text_field :title %></td>
       </tr>
       <tr>
-        <td colspan=4><b>開催日程</b></td>
+        <th colspan=4>開催日程</th>
       </tr>
       <tr>
-        <td><%= f.date_field :datetime1 %></td>
+        <td><%= f.date_field :datetime1 %> <%= f.time_field :datetime1 %></td>
       </tr>
       <tr>
-        <td colspan=4><b>締切日時</b></td>
+        <th colspan=4>締切日時</th>
       </tr>
       <tr>
-        <td><%= f.date_field :datatime2 %></td>
+        <td><%= f.date_field :datatime2 %> <%= f.time_field :datatime2 %></td>
       </tr>
       <tr>
-        <td colspan=4><b>詳細</b></td>
+        <th colspan=4>詳細</th>
       </tr>
       <tr>
         <td colspan=4><%= f.text_area :free, :size => "100x20" %></td>
@@ -40,8 +40,18 @@
     </table>
   </div>
 <br><br>
-<br><br>
+
   <div class="actions">
-    <%= f.submit %>
+    <table>
+      <tr>
+        <td>
+          <form>
+            <input type="radio" name="type" value="public" checked>全社向けイベント<br>
+            <input type="radio" name="type" value="private">関係者限定イベント
+          </form>
+        </td>
+        <td><%= f.submit %></td>
+      </tr>
+    </table>
   </div>
 <% end %>
