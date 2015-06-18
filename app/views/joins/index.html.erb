@@ -1,13 +1,11 @@
-<h1>Listing joins</h1>
+<h1>＜イベント名（要編集）＞の参加者一覧</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Number</th>
-      <th>Pass</th>
-      <th>event</th>
-      <th colspan="3"></th>
+      <th></th>
+      <th>氏名</th>
+      <th>社員番号</th>
     </tr>
   </thead>
 
@@ -18,13 +16,16 @@
         <td><%= i %></td>
         <td><%= join.name %></td>
         <td><%= join.number %></td>
-        <td><%= join.pass %></td>
-        <td><%= link_to 'Show', join %></td>
-        <td><%= link_to 'Edit', edit_join_path(join) %></td>
-        <td><%= link_to 'Destroy', join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '参加取消', join, method: :delete, data: { confirm: '取消してもよろしいですか？' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<<<<<<< HEAD
+
+<%= link_to 'イベント詳細', new_join_path %>
+
+=======
+>>>>>>> 306e1f8f7957c612fdcf68a2e0fb64f0ead851ae
