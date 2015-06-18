@@ -40,7 +40,18 @@
     </table>
   </div>
 <br><br>
+
   <div class="actions">
-    <%= f.submit %>
+    <table>
+      <tr>
+        <td>
+          <form>
+            <input type="radio" name="type" value="public" checked>全社向けイベント<br>
+            <input type="radio" name="type" value="private">関係者限定イベント
+          </form>
+        </td>
+        <td><%= f.submit %></td>
+      </tr>
+    </table>
   </div>
 <% end %>
