@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618043223) do
+ActiveRecord::Schema.define(version: 20150618044416) do
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150618043223) do
     t.datetime "datetime1"
     t.datetime "datatime2"
     t.string   "passwd"
+    t.string   "scope"
   end
 
   create_table "joins", force: true do |t|
