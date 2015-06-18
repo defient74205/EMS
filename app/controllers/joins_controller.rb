@@ -32,7 +32,7 @@ class JoinsController < ApplicationController
 
     respond_to do |format|
       if @join.save
-        format.html { redirect_to @join, notice: 'Join was successfully created.' }
+        format.html { redirect_to @join, notice: '参加申し込み完了' }
         format.json { render :show, status: :created, location: @join }
       else
         format.html { render :new }

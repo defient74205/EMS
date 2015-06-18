@@ -1,4 +1,4 @@
-<h1>Listing joins</h1>
+<h1 id="notice">Listing joins</h1>
 
 <table>
   <thead>
@@ -18,10 +18,12 @@
         <td><%= i %></td>
         <td><%= join.name %></td>
         <td><%= join.number %></td>
-        <td><%= join.pass %></td>
+        <td><%= join.pass %></td>      
+<!--
         <td><%= link_to 'Show', join %></td>
         <td><%= link_to 'Edit', edit_join_path(join) %></td>
-        <td><%= link_to 'Destroy', join, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+-->
+        <td><%= link_to '削除', join, method: :delete, data: { confirm: '削除してもよろしいですか？' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Join', new_join_path %>
+<%= link_to 'Back', "/events" %>
