@@ -5,6 +5,7 @@ class JoinsController < ApplicationController
   # GET /joins.json
   def index
     @joins = Join.all.where(event_id: params[:event_id])
+    @event = Event.find(params["event_id"])
   end
 
   # GET /joins/1
