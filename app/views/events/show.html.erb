@@ -6,20 +6,18 @@
     <td><%= @event.title %></td>
   </tr>
   <tr>
-    <th>開催日</th>
-    <td><%= @event.year1 %>年<%= @event.month1 %>月<%= @event.day1 %>日</td>
-    <td><%= @event.hour1 %>：<%= @event.minute1 %>～</td>
+    <th>開催日程</th>
+    <td><%= @event.datetime1 %></td>
   </tr>
   <tr>
     <th>申込締切</th>
-    <td><%= @event.year2 %>年<%= @event.month2 %>月<%= @event.day2 %>日</td>
-    <td><%= @event.hour2 %>：<%= @event.minute2 %>まで</td>
+    <td><%= @event.datatime2 %></td>
   </tr>
   <tr>
     <th>イベント内容</th>
     <td><%= @event.free %></td>
   </tr>
 </table>
-
+<%= link_to '参加者フォーム', "/joins/new?event_id=#{@event.id}" %>
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

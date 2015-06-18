@@ -12,7 +12,6 @@
   <% end %>
   
   <div class="form">
-    <form>
     <table>
       <tr>
         <td colspan=4><b>イベント名</b></td>
@@ -24,17 +23,13 @@
         <td colspan=4><b>開催日程</b></td>
       </tr>
       <tr>
-        <td>年月日：<input type="date"></td>
-        <td>開始時刻：<input type="time"></td>
+        <td><%= f.date_field :datetime1 %></td>
       </tr>
       <tr>
         <td colspan=4><b>締切日時</b></td>
       </tr>
       <tr>
-        <td><%= f.number_field :year2 %> 年</td>
-        <td><%= f.number_field :month2 %> 月</td>
-        <td><%= f.number_field :day2 %> 日</td>
-        <td><%= f.text_field :hour2 %>：<%= f.text_field :minute2 %> まで</td>
+        <td><%= f.date_field :datatime2 %></td>
       </tr>
       <tr>
         <td colspan=4><b>詳細</b></td>
@@ -43,15 +38,8 @@
         <td colspan=4><%= f.text_area :free, :size => "100x20" %></td>
       </tr>
     </table>
-    </form>
   </div>
 <br><br>
-  <div class="form">
-    <form>
-      <input type="date">
-      <input type="time">
-    </form>
-  </div>
 <br><br>
   <div class="actions">
     <%= f.submit %>

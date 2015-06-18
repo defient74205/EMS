@@ -13,9 +13,9 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= link_to event.title, event %></td>
-        <td><%= event.year1 %> 年 <%= event.month1 %> 月 <%= event.day1 %> 日 <%= event.hour1 %>：<%= event.minute1 %> ～</td>
+        <td><%= event.datetime1 %> ～</td>
         <td><%= link_to '内容編集', edit_event_path(event) %></td>
-        <td><%= link_to 'イベント削除', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'イベント削除', event, method: :delete, data: { confirm: '削除してもよろしいですか' } %></td>
       </tr>
     <% end %>
   </tbody>

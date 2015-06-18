@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :title %><br>
+    <%=  @event.title if @event %>
+  </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>

@@ -15,6 +15,7 @@ class JoinsController < ApplicationController
   # GET /joins/new
   def new
     @join = Join.new
+    @event = Event.find(params["event_id"])
   end
 
   # GET /joins/1/edit
@@ -69,6 +70,6 @@ class JoinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def join_params
-      params.require(:join).permit(:name, :number, :pass, :title, :promotor)
+      params.require(:join).permit(:name, :number, :pass, :promotor, :event_id)
     end
 end
