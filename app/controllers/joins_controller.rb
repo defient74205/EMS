@@ -4,7 +4,7 @@ class JoinsController < ApplicationController
   # GET /joins
   # GET /joins.json
   def index
-    @joins = Join.all
+    @joins = Join.all.where(event_id: params[:event_id])
   end
 
   # GET /joins/1
@@ -25,7 +25,10 @@ class JoinsController < ApplicationController
   # POST /joins
   # POST /joins.json
   def create
+    logger.info params.inspect
+    
     @join = Join.new(join_params)
+    @join.event_id=params["event_id"]
 
     respond_to do |format|
       if @join.save
