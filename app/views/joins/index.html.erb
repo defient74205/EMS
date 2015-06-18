@@ -13,7 +13,7 @@
     
     <% @joins.each.with_index(1) do |join,i| %>
       <tr>
-        <td><%= i %></td>
+        <td class="num"><%= i %></td>
         <td><%= join.name %></td>
         <td><%= join.number %></td>
         <td><%= link_to '参加取消', join, method: :delete, data: { confirm: '取消してもよろしいですか？' } %></td>
