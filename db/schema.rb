@@ -11,23 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618011216) do
+ActiveRecord::Schema.define(version: 20150618021836) do
 
   create_table "events", force: true do |t|
     t.string   "title"
-    t.integer  "year1"
-    t.integer  "month1"
-    t.integer  "day1"
-    t.integer  "hour1"
-    t.integer  "minute1"
-    t.integer  "year2"
-    t.integer  "month2"
-    t.integer  "day2"
-    t.integer  "hour2"
-    t.integer  "minute2"
     t.text     "free"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "promotor"
+    t.datetime "datetime1"
+    t.datetime "datatime2"
   end
 
   create_table "joins", force: true do |t|
