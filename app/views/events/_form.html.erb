@@ -40,10 +40,8 @@
       <div class="actions">
       <tr>
         <td>
-          <form>
-            <input type="radio" name="type" value="public" checked>全社向けイベント<br>
-            <input type="radio" name="type" value="private">関係者限定イベント
-          </form>
+          <label><%= f.radio_button :scope, "0" %>全社向けイベント</label>
+          <label><%= f.radio_button :scope, "1" %>関係者限定イベント</label>
         </td>
         <td class="reset"><%= reset_tag "リセット", type: "reset" %></td>
         <td class="create"><%= f.submit "イベント作成" %></td>
@@ -51,5 +49,4 @@
       </div>
     </table>
   </div>
-<br><br>
 <% end %>
