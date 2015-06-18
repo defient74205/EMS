@@ -1,4 +1,4 @@
-<h1>＜イベント名（要編集）＞の参加者一覧</h1>
+<h1>＜<%=  @event.title if @event %>＞の参加者一覧</h1>
 
 <table>
   <thead>
@@ -23,9 +23,5 @@
 </table>
 
 <br>
-<<<<<<< HEAD
-
 <%= link_to 'イベント詳細', new_join_path %>
 
-=======
->>>>>>> 306e1f8f7957c612fdcf68a2e0fb64f0ead851ae
