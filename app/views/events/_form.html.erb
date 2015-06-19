@@ -17,7 +17,7 @@
         <th colspan=3>イベント名</th>
       </tr>
       <tr>
-        <td colspan=3><%= f.text_field :title %></td>
+        <td colspan=3><%= f.text_field :title, :size => "80" %></td>
       </tr>
       <tr>
         <th colspan=3>開催日程</th>
@@ -40,7 +40,7 @@
       <div class="actions">
       <tr>
         <td>
-          <label><%= f.radio_button :scope, "0" %>全社向けイベント</label>
+          <label><%= f.radio_button :scope, "0" , {:checked => true} %>全社向けイベント</label>
           <label><%= f.radio_button :scope, "1" %>関係者限定イベント</label>
         </td>
         <td class="reset"><%= reset_tag "リセット", type: "reset" %></td>
