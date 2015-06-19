@@ -1,3 +1,4 @@
+
 <h1><%=  @event.title if @event %>の参加者一覧</h1>
 
 <table>
@@ -16,12 +17,16 @@
         <td class="num"><%= i %></td>
         <td><%= join.name %></td>
         <td><%= join.number %></td>
+
         <td><%= link_to '参加取消', join, method: :delete, data: { confirm: '取消してもよろしいですか？' } %></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to 'イベント詳細', new_join_path %>
+<!---<%= link_to 'イベント詳細', new_join_path %>
+
+<%= link_to '戻る', "/events" %>
 
