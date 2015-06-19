@@ -3,23 +3,26 @@
 <table class="show_events">
   <tr>
     <th>イベント名</th>
-    <td><%= @event.title %></td>
+    <td colspan=3><%= @event.title %></td>
   </tr>
   <tr>
     <th>開催日程</th>
-    <td><%= @event.datetime1 %></td>
+    <td colspan=3><%= @event.datetime1 %></td>
   </tr>
   <tr>
     <th>申込締切</th>
-    <td><%= @event.datatime2 %></td>
+    <td colspan=3><%= @event.datatime2 %></td>
   </tr>
   <tr>
     <th>イベント内容</th>
-    <td><%= @event.free %></td>
+    <td colspan=3><%= @event.free %></td>
+  </tr>
+  <tr>
+    <td><%= link_to '参加申込', "/joins/new?event_id=#{@event.id}" %></td>
+    <td><%= link_to '参加状況', "/joins?event_id=#{@event.id}" %></td>
+    <td><%= link_to 'イベント編集', edit_event_path(@event) %></td>
+    <td><%= link_to '戻る', events_path %></td>
   </tr>
 </table>
-<br><br><br><br>
-<%= link_to '参加申込フォーム', "/joins/new?event_id=#{@event.id}" %> | 
-<%= link_to '参加状況', "/joins?event_id=#{@event.id}" %> | 
-<%= link_to 'イベント編集', edit_event_path(@event) %> |
-<%= link_to '戻る', events_path %>
+
+
