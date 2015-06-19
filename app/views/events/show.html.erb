@@ -29,9 +29,9 @@
     </td>
   </tr>
   <tr>
-    <td><%= link_to '参加申込', "/joins/new?event_id=#{@event.id}" %></td>
-    <td><%= link_to '参加状況', "/joins?event_id=#{@event.id}" %></td>
-    <td><%= link_to 'イベント編集', edit_event_path(@event) %></td>
-    <td><%= link_to '戻る', events_path %></td>
+    <td class="event_button"><%= button_to '参加申込', "/joins/new?event_id=#{@event.id}" %></td>
+    <td class="event_button"><%= button_to '参加状況', "/joins?event_id=#{@event.id}" %></td>
+    <td class="event_button"><%= button_to 'イベント編集', edit_event_path(@event) %></td>
+    <td class="event_button"><%= button_to '戻る', events_path %></td>
   </tr>
 </table>
