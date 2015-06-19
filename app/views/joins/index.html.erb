@@ -15,7 +15,10 @@
     
     <% @joins.each.with_index(1) do |join,i| %>
       <tr>
-        <td class="num"><%= i %></td>
+        <td class="num">
+          <input type="checkbox">
+          <%= i %>
+        </td>
         <td><%= join.name %></td>
         <td class="member_num"><%= join.number %></td>
 
