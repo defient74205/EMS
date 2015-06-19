@@ -56,3 +56,12 @@ table.show_events th:after {
     border-width: 10px;
     margin-top: -10px;
 }
+
+@media print {
+  a[href]:after {
+    content: "";
+  }
+  abbr[title]:after {
+    content: "";
+  }
+}
