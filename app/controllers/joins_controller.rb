@@ -5,6 +5,7 @@ class JoinsController < ApplicationController
   # GET /joins.json
   def index
     @joins = Join.all.where(event_id: params[:event_id])
+    @event = Event.find(params["event_id"])
   end
 
   # GET /joins/1
@@ -46,7 +47,7 @@ class JoinsController < ApplicationController
   def update
     respond_to do |format|
       if @join.update(join_params)
-        format.html { redirect_to @join, notice: 'Join was successfully updated.' }
+        format.html { redirect_to @join, notice: '' }
         format.json { render :show, status: :ok, location: @join }
       else
         format.html { render :edit }
@@ -58,9 +59,10 @@ class JoinsController < ApplicationController
   # DELETE /joins/1
   # DELETE /joins/1.json
   def destroy
+    event_id = @join.event_id
     @join.destroy
     respond_to do |format|
-      format.html { redirect_to joins_url, notice: 'Join was successfully destroyed.' }
+      format.html { redirect_to "/joins?event_id=#{event_id}", notice: '' }
       format.json { head :no_content }
     end
   end
