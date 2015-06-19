@@ -17,3 +17,12 @@ td.num{
 td.member_num{
   text-align : right;
 }
+
+@media print {
+  a[href]:after {
+    content: "";
+  }
+  abbr[title]:after {
+    content: "";
+  }
+}

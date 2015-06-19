@@ -24,3 +24,12 @@ table {
   border-spacing : 15px ;
 }
 th { border-bottom: 1px solid #DDD; }
+
+@media print {
+  a[href]:after {
+    content: "";
+  }
+  abbr[title]:after {
+    content: "";
+  }
+}
