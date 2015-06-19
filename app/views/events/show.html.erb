@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<table class="show_events">
+<table class="show_evevts">
   <tr>
     <th>イベント名</th>
     <td><%= @event.title %></td>
@@ -16,6 +16,10 @@
   <tr>
     <th>イベント内容</th>
     <td><%= @event.free %></td>
+  </tr>
+   <tr>
+    <th>公開URL</th>
+    <td><%= request.url  %></td>
   </tr>
 </table>
 <br><br><br><br>
